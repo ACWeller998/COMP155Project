@@ -1,3 +1,3 @@
 # COMP155Project
 
-This is the repo for us to work on the project.
+This Branch is where we do our actual work and then work it into the main project.
