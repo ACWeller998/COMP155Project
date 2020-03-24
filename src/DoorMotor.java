@@ -1,5 +1,6 @@
+//@author Kaiya Wangler
 public class DoorMotor {
-  private boolean door;
+	private boolean door;
 	
 	/* The method setDoor stores a value in the field
 	 * door.
@@ -21,4 +22,7 @@ public class DoorMotor {
 	public boolean getDoor() {
 		return door;
 	}
+	
+	
+
 }
