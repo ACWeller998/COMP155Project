@@ -1,5 +1,7 @@
+//@author Kaiya Wangler
 public class DoorControl {
-  private boolean buttonDoor; 
+	
+	private boolean buttonDoor; 
 	
 	
 	/*
@@ -20,4 +22,8 @@ public class DoorControl {
 	public boolean getButton() {
 		return buttonDoor;
 	}
+	
+	
+
+	
 }
