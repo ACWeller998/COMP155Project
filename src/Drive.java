@@ -1,5 +1,6 @@
 
-  public class Drive {
+  //@author Kaiya Wangler
+public class Drive {
 	
 	private int pos;
 	private String direct;
