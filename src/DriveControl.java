@@ -1,5 +1,6 @@
+//@author Kaiya Wangler
 public class DriveControl {
-  private int position;
+	private int position;
 	private String direction;
 	
 	/*
