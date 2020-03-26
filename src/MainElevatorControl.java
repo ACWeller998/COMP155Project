@@ -1,4 +1,14 @@
+//@author Aidan Weller
 public class MainElevatorControl {
 
-    TYPING TYPING TYPING
+Dispatcher dispatch = new Dispatcher();
+
+
+
+
+public void go(int floor){
+    system.out.println("We are at floor " + dispatch.getfloor()
+    dispatch.setFloor(this.floor);
+    
+}
 }

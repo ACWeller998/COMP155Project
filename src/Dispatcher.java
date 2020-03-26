@@ -3,32 +3,38 @@ import java.util.Scanner;
 //Need to make this loop through to give multiple inputs. Need to make an array.
 public class Dispatcher extends MainElevatorControl {
 
-	public static void main(String[] args) {
+		DriveControl driveControl = new DriveControl();
+		private int current = 1;
 
-		Drive m = new Drive();
-		DriveControl car = new DriveControl();
-		
-		int current = 1;
-		Scanner floor = new Scanner(System.in);
-		System.out.println("Enter a floor 1-3.");
-		int input = floor.nextInt();
+// Scanner floor = new Scanner(System.in);
+// 		System.out.println("Enter a floor 1-3.");
+// 		int input = floor.nextInt();
+
+	public int setFloor(int input, int max) {
+		driveControl.setPosition(input,max);
+	}
+
+	public int getFloor() {
+	int output = driveControl.getPosition();
+	return output;
+	}
 				
-		if (current < input) {
-			car.setPosition(input);
-			car.setDirection("UP");
-			int p = car.getPosition();
-			String d = car.getDirection();
-			m.setMovement(p,d);
-		}
+		// if (current < input) {
+		// 	driveControl.setPosition(input);
+		// 	driveControl.setDirection("UP");
+		// 	int p = driveControl.getPosition();
+		// 	String d = driveControl.getDirection();
+		// 	m.setMovement(p,d);
+		// }
 		
-		if (current > input) {
-			car.setPosition(input);
-			car.setDirection("DOWN");
-			int p = car.getPosition();
-			String d = car.getDirection();
-			m.setMovement(p,d);
+		// if (current > input) {
+		// 	driveControl.setPosition(input);
+		// 	driveControl.setDirection("DOWN");
+		// 	int p = driveControl.getPosition();
+		// 	String d = driveControl.getDirection();
+		// 	m.setMovement(p,d);
 			
-		}
+		// }
 		
 		System.out.println("Press 'd' to open the door.");
 	
@@ -62,7 +68,8 @@ public class Dispatcher extends MainElevatorControl {
 			}
 			time++;
 		}
-	}
-
+	
+	
 }
+
 
