@@ -2,27 +2,27 @@
   //@author Kaiya Wangler
 public class Drive {
 	
-	private int pos;
+	private int position;
 	private String direct;
-	int current = 1;
+	private int current = 1;
 	
 	/* The method setMovement stores a value in the fields
-	 * direct and pos.
-	 * @param d and p The values to store in the direct and pos fields.
+	 * direct and position.
+	 * @param d and p The values to store in the direct and position fields.
 	 */
 	public void setMovement(int p, String d) {
 		direct = d;
-		pos = p;
+		position = p;
 	}
 	
 	/* The method getMovement returns a Drive object's
-	 * pos.
-	 * @return The value in the pos field.
+	 * position.
+	 * @return The value in the position field.
 	 * 
 	 */
 	
 	public int getMovement() {
-		return pos;
+		return position;
 		
 	}
 	
@@ -37,20 +37,20 @@ public class Drive {
 	}
 	
 	/* The method calculateMovement returns a Drive object's
-	 * pos after changing current to the new position.
-	 * @return The value in the pos field.
+	 * position after changing current to the new positionition.
+	 * @return The value in the position field.
 	 * 
 	 */
 	
 	public int calculateMovement() {
 		if (direct == "UP") {
-			while (current < pos) {
+			while (current < position) {
 				current ++;
 			}
 		}
 		
 		if (direct == "DOWN") {
-			while (current > pos) {
+			while (current > position) {
 				current --;
 			}
 		}
@@ -58,7 +58,7 @@ public class Drive {
 		else {
 			current = 1;
 		}
-		current = pos;
+		current = position;
 		return current;
 	}
 	
