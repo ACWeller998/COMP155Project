@@ -10,10 +10,6 @@ public class DriveControl {
 	 */
 	
 	public int setPosition (int position,int max) {
-		if(position>max){
-			System.err.println("You done fucked it");
-		}
-
 		if(position<drive.getMovement()){
 			direction = true;  //True == up
 		}else

@@ -12,14 +12,10 @@ public class Main {
         elevator = new ElevatorControl(tempMaxFloor,tempWeightLimit);
         
         while(EXIT!=true){
-            elevator.go(5, 10);
+            elevator.selectFloor();
             EXIT = true;
         }//Everything goes in here.
     }
 }
 
 
-
-// Scanner floor = new Scanner(System.in);
-// 		System.out.println("Enter a floor 1-3.");
-// 		int input = floor.nextInt();

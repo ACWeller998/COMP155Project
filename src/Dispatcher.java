@@ -1,17 +1,41 @@
 //@author Kaiya Wangler
-import java.util.Scanner;
+
 //Need to make this loop through to give multiple inputs. Need to make an array.
 public class Dispatcher {
 
 		DriveControl driveControl = new DriveControl();
-		private int current; //Maybe don't need
-
+		DoorControl doorControl = new DoorControl();
+		private int current;
+	//FloorStatus section.
 	public void setFloor(int input, int max) {
+		if(input>max){
+			System.err.println("You done fucked it");
+			return;
+		}
+		setDoorstatus(true);
+		setDoorstatus(false);
 		driveControl.setPosition(input,max);
-		System.out.println("Floor was set to" + input);
+		System.out.println("Floor was set to: " + input);
+		setDoorstatus(true);
 	}
+
 	public int getFloor() {
-	return driveControl.getPosition();
+		return driveControl.getPosition();
+	}
+	//DoorStatus Section. This is handled by the setFloor method automatically.
+	public void setDoorstatus(boolean status){
+		doorControl.setDoorStatus(status);
+		getDoorstatus();
+	}
+
+	public boolean getDoorstatus(){
+		if(doorControl.getDoorStatus()){
+			System.out.println("Doors are open! ");
+		}else
+		if(!doorControl.getDoorStatus()){
+			System.out.println("Doors are closed! ");
+		}
+		return doorControl.getDoorStatus();
 	}
 
 //		//System.out.println("Press 'd' to open the door.");
