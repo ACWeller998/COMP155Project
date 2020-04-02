@@ -1,7 +1,6 @@
 //@author Kaiya Wangler
 public class DriveControl {
-	private int position;
-	private String direction;
+	private boolean direction;
 	Drive drive = new Drive();
 	/*
 	 * The setPostion method stores a value in the
@@ -10,13 +9,15 @@ public class DriveControl {
 	 * 
 	 */
 	
-	public String setPosition (int pos, int max) {
-		int max = this.max;
-		if(position<MAX){
-			system.err("You fucked up");
-		}
-		drive.pos = this.pos; //This will be count, and ending position
-		return "Floor set to " + pos ;
+	public int setPosition (int position,int max) {
+		if(position<drive.getMovement()){
+			direction = true;  //True == up
+		}else
+			direction = false; // false == down
+		drive.setMovement(position,max,direction);
+
+		 //This will be count, and ending position
+		return drive.getMovement();
 	}
 
 	/*
@@ -36,7 +37,7 @@ public class DriveControl {
 	 * @param dir The value to store in direction.
 	 */
 	
-	public void setDirection (String dir) {
+	public void setDirection (boolean dir) {
 		direction = dir;
 	}
 	
@@ -48,9 +49,27 @@ public class DriveControl {
 	 * @return The value in the direction field.
 	 */
 	
-	public String getDirection() {
+	public boolean getDirection() {
 		return direction;
 	}
 	
 	
 }
+
+
+// if (current < input) {
+// 	driveControl.setPosition(input);
+// 	driveControl.setDirection("UP");
+// 	int p = driveControl.getPosition();
+// 	String d = driveControl.getDirection();
+// 	m.setMovement(p,d);
+// }
+
+// if (current > input) {
+// 	driveControl.setPosition(input);
+// 	driveControl.setDirection("DOWN");
+// 	int p = driveControl.getPosition();
+// 	String d = driveControl.getDirection();
+// 	m.setMovement(p,d);
+
+// }
