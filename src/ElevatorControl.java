@@ -11,18 +11,13 @@ public class ElevatorControl {
     private int maxWeight;
     private int totalWeightInElevator;
     private int[] crowdInElevator;
+    Safety safety;
     //Safety safety = new Safety(totalWeightInElevator,maxWeight);
 
     ElevatorControl(int maxFloor,int weightLimit){
         topFloor = maxFloor;
         maxWeight = weightLimit;
         System.out.println ("Top Floor: " + topFloor + "\n WeightLimit: " + maxWeight);
-        CrowdGenerator crowd = new CrowdGenerator(NumberGenerator.genRandomCrowd());
-        crowdInElevator = crowd.getCrowd();
-        totalWeightInElevator = crowd.getWeight();
-        //System.err.println("ElevatorControl.Java: TotalWeightInElevator " + totalWeightInElevator);
-        Safety safety = new Safety(totalWeightInElevator,maxWeight);
-        safety.WeightCheckElevator();
 }
 
 //Elevator Movement Methods.
@@ -41,8 +36,27 @@ public class ElevatorControl {
         Scanner floor = new Scanner(System.in);
         System.out.println("Enter a floor 1-" + topFloor);
         int input = floor.nextInt();
+        doCrowdMath();
+        rollForRandomDisaster();
         go(input);
 }
 //Safety Methods.
-
+    public void doCrowdMath(){
+        CrowdGenerator crowd = new CrowdGenerator(NumberGenerator.genRandomCrowd());
+        crowdInElevator = crowd.getCrowd();
+        totalWeightInElevator = crowd.getWeight();
+        //System.err.println("ElevatorControl.Java: TotalWeightInElevator " + totalWeightInElevator);
+        safety = new Safety(totalWeightInElevator,maxWeight);
+        safety.WeightCheckElevator();
+    }
+    public void rollForRandomDisaster(){
+       boolean result = safety.rollDisaster();
+       if(result){
+           System.err.println("You rolled a nat one on your disaster check!");
+           return;
+        }else
+       if(!result){
+           System.out.println("You passed your disaster check!");
+       }
+    }
 }

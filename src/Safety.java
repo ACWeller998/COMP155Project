@@ -1,4 +1,5 @@
 //@author Aidan Weller
+import RandomNumbers.NumberGenerator;
 public class Safety {
     EmergencyBrakes EBrake = new EmergencyBrakes();
     int totalWeightInElevator;
@@ -10,7 +11,6 @@ public class Safety {
     //Weight Stuff dude, this was a total fucking bitch to do. Several hours of debugging.
     public void WeightCheckElevator(){
         safetyCheck(totalWeightInElevator,maxWeight);
-
     }
 
     public void safetyCheck(int totalWeightInElevator,int maxWeight){
@@ -23,7 +23,15 @@ public class Safety {
             System.err.println("HOLY FUCK IT'S TOO HEAVY");
             EBrake.HOLYFUCKSTOP();
         }
-
     }
 
+    public boolean rollDisaster() {
+       boolean disasterStatus = false;
+       int result = NumberGenerator.genRandomDisaster();
+       if(result<2){
+           disasterStatus = true;
+           return disasterStatus;
+       }else
+        return disasterStatus;
+    }
 }

@@ -8,7 +8,7 @@ public class Dispatcher {
 		private int current;
 	//FloorStatus section.
 	public void setFloor(int input, int max) {
-		if(input>max){
+		if((input>max) || (input<1)){
 			System.err.println("You done fucked it");
 			return;
 		}

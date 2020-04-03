@@ -14,4 +14,6 @@ public class NumberGenerator {
     public static int genRandomWeightPerson() { return random.nextInt(1000);}
 
     public static int genRandomCrowd(){return random.nextInt(20);}
+
+    public static int genRandomDisaster(){return random.nextInt(20);}
 }
