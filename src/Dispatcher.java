@@ -1,6 +1,4 @@
-//@author Kaiya Wangler
 
-//Need to make this loop through to give multiple inputs. Need to make an array.
 public class Dispatcher {
 
 		DriveControl driveControl = new DriveControl();
