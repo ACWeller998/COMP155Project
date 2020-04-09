@@ -12,7 +12,7 @@ public class LanternControl {
     System.out.println(getmovement);
   }
   
-  public int showStop {
+  public int showStop() {
     
     Drive drive = new Drive;
     Drive.calculatemovement();
