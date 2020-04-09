@@ -2,7 +2,7 @@
 
 public class Lantern {
     
-    DriveControl lantern = new DriveControl();
+    DriveControl control = new DriveControl();
     
     public void goUp(){
         
