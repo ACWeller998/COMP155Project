@@ -21,7 +21,7 @@ public class LanternControl {
     System.out.println ( calculatemovement );
     
  }
-  public int upDown(){         // this is to print the direction of the elevator(up/down)
+  public int upDown(current , input ){         // this is to print the direction of the elevator(up/down)
     Lantern lantern = new Lantern;
     if (current < input) {
       Lantern.goUp();}
