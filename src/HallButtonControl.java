@@ -1,4 +1,4 @@
-// author poorvi (300166550)
+// author jasnoor
 
 public class HallButtonControl
 {
