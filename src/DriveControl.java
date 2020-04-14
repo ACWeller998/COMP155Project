@@ -56,20 +56,3 @@ public class DriveControl {
 	
 }
 
-
-// if (current < input) {
-// 	driveControl.setPosition(input);
-// 	driveControl.setDirection("UP");
-// 	int p = driveControl.getPosition();
-// 	String d = driveControl.getDirection();
-// 	m.setMovement(p,d);
-// }
-
-// if (current > input) {
-// 	driveControl.setPosition(input);
-// 	driveControl.setDirection("DOWN");
-// 	int p = driveControl.getPosition();
-// 	String d = driveControl.getDirection();
-// 	m.setMovement(p,d);
-
-// }
