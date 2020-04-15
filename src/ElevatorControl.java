@@ -7,7 +7,7 @@ public class ElevatorControl {
 
 //Instantiation of Control objects.
     Dispatcher dispatcher = new Dispatcher();
-    CarPositionIndicator indicator = new CarPositionIndicator();
+    LanternControl lantern = new LanternControl();
     
     private int topFloor;
     private int maxWeight;
@@ -31,7 +31,7 @@ public class ElevatorControl {
        //The current position of the car
         for (int count = 0; count <= floor; count++ ) {
     	   dispatcher.setFloor(count, topFloor);
-    	   indicator.getFloor();
+    	   lantern.getPosition();
        }
         this.rememberMe = floor;
         
