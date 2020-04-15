@@ -16,7 +16,7 @@ public class HallButtonControl {
              downLight=true; //set
              }
              
-     }
+     } // rest of the stuff needs to be added up. I have added the lights up here as it was mentioned in the project criteria.
     }
              
              
