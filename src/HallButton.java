@@ -3,11 +3,13 @@
 public class HallButton {
   boolean upButton= false;
   boolean downButton=false;
+  String direction= null;
   
   
-  public HallButton(boolean ubutton,boolean dbutton){
+  public HallButton(boolean ubutton,boolean dbutton, String dirn){
     upButton=ubutton;
     downButton=dbutton;
+    direction=dirn;
   }
   
   
@@ -24,6 +26,12 @@ public class HallButton {
   }
   public void setdownButton(boolean dbutton){
     downButton=dbutton;
+  }
+  public String getDirection(){
+    return direction;
+  }
+  public void setDirection(String dirn){
+    direction=dirn;
   }
 }
     
