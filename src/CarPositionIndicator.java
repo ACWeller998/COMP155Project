@@ -1,35 +1,19 @@
 //@author Kaiya Wangler
-public class CarPositionIndicator {
-	private int floorNum;
-	private int defaultFloor;
-	
-	/* The method setFloorNum stores a value in the floorNum and defaultFloor
-	 * fields.
-	 * @param f and d The values that are stored in the fields floorNum
-	 * and defaultFloor 
-	 */
+//This class indicates the position of the elevator car
 
-	public void setFloorNum (int f, int d) {
-		floorNum = f;
-		defaultFloor = d;
-		
-	}
+public class CarPositionIndicator {
 	
-	/*The method getDefaultFloor returns an object of the class.
-	 * @return The value in the defaultFloor field.
+	DriveControl driveControl = new DriveControl();
+	/* The method getFloor returns the position
+	 * of the elevator car.
+	 * @return The floor number of the car.
 	 */
 	
-	public int getDefaultFloor() {
-		return defaultFloor;
-	}
 	
-	/*The method getFloorNum returns an object of the class.
-	 * @return The value in the floorNum field. 
-	 */
-	
-	public int getFloorNum() {
-		return floorNum;
+	public int getFloor() {
+		return driveControl.getPosition(); //This is just the position of the elevator
 	}
 	
 	
 }
+

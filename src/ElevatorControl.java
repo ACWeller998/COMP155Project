@@ -7,10 +7,15 @@ public class ElevatorControl {
 
 //Instantiation of Control objects.
     Dispatcher dispatcher = new Dispatcher();
+    LanternControl lantern = new LanternControl();
+    
     private int topFloor;
     private int maxWeight;
     private int totalWeightInElevator;
     private int[] crowdInElevator;
+    private int rememberMe;
+    
+
     Safety safety;
     //Safety safety = new Safety(totalWeightInElevator,maxWeight);
 
@@ -23,7 +28,13 @@ public class ElevatorControl {
 //Elevator Movement Methods.
     public void go(int floor){
         System.out.println("We are at Floor: " + dispatcher.getFloor());
-        dispatcher.setFloor(floor,topFloor);
+       //The current position of the car
+        for (int count = 0; count <= floor; count++ ) {
+    	   dispatcher.setFloor(count, topFloor);
+    	   lantern.getPosition();
+       }
+        this.rememberMe = floor;
+        
         System.out.println("We are at Floor: " + dispatcher.getFloor());
 }
 
