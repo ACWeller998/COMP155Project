@@ -1,6 +1,7 @@
 //jasnoor
 
 public class HallButtonControl {
+    int totalFloor;
     Boolean upLight = false; //not set
     Boolean downLight = false; // not set
     
@@ -27,14 +28,10 @@ public class HallButtonControl {
     //array
     public static void store(){
         hallButton[] buttons = new hallButton[200];
-        //normal array with inputs manually
-        buttons[0] = hallButton.getupButton();
-        buttons[1] = hallButton.getdownButton();
-        
-        //using the for loop
+        int total;
         
         for (int i=0; i< buttons.length; i++){
-            total = tfloor.next();
+            total = totalFloor.next();
             buttons[i] = new hallButton();
             buttons[i].setbuttons(total);
         }
