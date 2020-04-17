@@ -22,32 +22,30 @@ public class HallButtonControl {
     public HallButtonControl(int tFloor) {
         totalFloor = tFloor;
     }
+    
+    
     //array
     public static void store(){
-        int array[];
-        array = new int [tfloor];
-        for (int i = 0; i< array.length; i++) {
-            array[i] = scan.nextLine();
+        hallButton[] buttons = new hallButton[200];
+        //normal array with inputs manually
+        buttons[0] = hallButton.getupButton();
+        buttons[1] = hallButton.getdownButton();
+        
+        //using the for loop
+        
+        for (int i=0; i< buttons.length; i++){
+            total = tfloor.next();
+            buttons[i] = new hallButton();
+            buttons[i].setbuttons(total);
         }
+            
+            
         
-        
-        //an idea 
-     boolean goUP = false;
-     boolean goDown = false;
-        
-     public int setupwardmovement(int currentposition, int array []) {
-         for (array [i] > hallButton.getcurrentposition()){
-             goUP = true; //set
-             currentposition = array [i];
-             i++;
-         }
-         
-     public int setdownwardmovement(int currentposition, int array[]) {
-         for (array[i] < hallButton.getcurrentposition()) {
-             goDown = true; //set
-             currentposition = array [i];
-             i++;
-         }
+        }
+      
+    
+     
+       
              
              
              
