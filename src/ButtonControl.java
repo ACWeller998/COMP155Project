@@ -10,4 +10,19 @@ public class ButtonControl
     accordingly to make sure the integration with the ElevatorControl class is fine!
      */
 
+    public boolean movement()
+    {
+       return carButtonControl.setLiftMovement();
+    }
+    
+    public boolean lights()
+    {
+       return carButtonControl.setLights();
+       
+    }
+     
+    public boolean halllight()
+    {
+       return hallButtonControl.setHallLight();   
+    }
 }
