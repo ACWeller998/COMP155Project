@@ -17,7 +17,11 @@ public class HallButtonControl {
              downLight=true; //set
              }
              
-     } 
+      
+     }
+    public int liftLocation(){
+        return hallbutton.getFloorNum();
+    }
    
     // contructor
     public HallButtonControl(int tFloor) {
