@@ -9,8 +9,11 @@ public class CarButton {
     boolean emergencyButton=false;
     boolean alarm=false;
 
-    //public CarButton()
-    //{}
+    public CarButton()
+    {
+        
+    
+    }
 
     public CarButton(int cfloor,int dfloor,boolean obutton,boolean cbutton,boolean ebutton,boolean aAlarm) {
         currentFloor=cfloor;
