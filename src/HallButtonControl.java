@@ -1,20 +1,46 @@
-// author jasnoor
+//jasnoor
 
-public class HallButtonControl
-{
-    Boolean upLight=false; //Not Set
-    Boolean downLight=false;//Not Set
-
+public class HallButtonControl {
+    int totalFloor;
+    Boolean upLight = false; //not set
+    Boolean downLight = false; // not set
+    
     HallButton hallButton=new HallButton();
-     public void setHallLight()
-     {
+    
+    public void setHallLight()
+    {
          if(hallButton.getDirection().equals("Up"))
          {
-             upLight=true; //Set
-         }
-         if(hallButton.getDirection().equals("Down"))
-             downLight=true;///Set
-
+             upLight=true; //set
+          }
+         if(hallButton.getDirection().equals("Down")){
+             downLight=true; //set
+             }
+             
+      
      }
-
+    public int liftLocation(){
+        return hallbutton.getFloorNum();
+    }
+   
+    // contructor
+    public HallButtonControl(int tFloor) {
+        totalFloor = tFloor;
+    }
+    
+    
+    //array
+    public void store(){
+        hallButton[] buttons = new hallButton[200];
+        
+        for (int i=0; i< buttons.length; i++){
+            buttons[i] = new hallButton();
+            buttons[i].setbuttons(totalFloor);
+        }
+        }
 }
+      
+    
+     
+       
+             
