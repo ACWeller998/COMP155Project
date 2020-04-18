@@ -26,19 +26,15 @@ public class HallButtonControl {
     
     
     //array
-    public static void store(){
+    public void store(){
         hallButton[] buttons = new hallButton[200];
-        int total;
         
         for (int i=0; i< buttons.length; i++){
-            total = totalFloor.next();
             buttons[i] = new hallButton();
-            buttons[i].setbuttons(total);
+            buttons[i].setbuttons(totalFloor);
         }
-            
-            
-        
         }
+}
       
     
      
