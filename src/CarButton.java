@@ -9,19 +9,19 @@ public class CarButton {
     boolean emergencyButton=false;
     boolean alarm=false;
 
-    public CarButton()
+    public CarButton(boolean obutton,boolean cbutton,boolean ebutton,boolean aAlarm)
     {
-        
-    
-    }
-
-    public CarButton(int cfloor,int dfloor,boolean obutton,boolean cbutton,boolean ebutton,boolean aAlarm) {
-        currentFloor=cfloor;
-        destinationFloor=dfloor;
         openButton=obutton;
         closeButton=cbutton;
         emergencyButton=ebutton;
-        alarm=aAlarm;
+        alarm=aAlarm; 
+    
+    }
+
+    public CarButton(int cfloor,int dfloor) {
+        currentFloor=cfloor;
+        destinationFloor=dfloor;
+       
     }
 
     public int getCurrentFloor() {
