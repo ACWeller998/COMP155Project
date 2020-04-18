@@ -12,17 +12,17 @@ public class CarButton {
     //public CarButton()
     //{}
 
-    public CarButton(int cfloor,int dfloor,boolean obutton,boolean cbutton,boolean ebutton,boolean a) {
+    public CarButton(int cfloor,int dfloor,boolean obutton,boolean cbutton,boolean ebutton,boolean aAlarm) {
         currentFloor=cfloor;
         destinationFloor=dfloor;
         openButton=obutton;
         closeButton=cbutton;
         emergencyButton=ebutton;
-        alarm=a;
+        alarm=aAlarm;
     }
 
     public int getCurrentFloor() {
-        return destinationFloor;
+        return currentFloor;
     }
 
     public void setCurrentFloor(int curfloor) {
