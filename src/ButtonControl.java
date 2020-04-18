@@ -2,13 +2,12 @@
 
 public class ButtonControl
 {
+    //creating objects of the CarButtonControl and HallButtonControl
+    
     CarButtonControl carButtonControl=new CarButtonControl();
     HallButtonControl hallButtonControl=new HallButtonControl();
 
-    /* TODO
-    Get the current and destination floors, create an object of this class and call the required methods
-    accordingly to make sure the integration with the ElevatorControl class is fine!
-     */
+   
 
     public boolean movement()
     {
@@ -25,4 +24,16 @@ public class ButtonControl
     {
        return hallButtonControl.setHallLight();   
     }
+    
+    public int location()
+    {
+        return hallButtonControl.liftLocation();
+        
+    }
+    
+   /* public int inputarray()
+    {
+       return hallbuttonControl.store()   
+    }*/
 }
+
