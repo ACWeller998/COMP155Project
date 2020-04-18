@@ -34,7 +34,7 @@ public class CarButtonControl {
 
     }
 
-    public void setLiftMovement()
+    public int setLiftMovement()
     {
         if(carButton.getDestinationFloor()>carButton.getCurrentFloor()){
             liftMovement=true;
@@ -44,6 +44,8 @@ public class CarButtonControl {
             liftMovement=true;
             System.out.println("Lift is going down");
         }
+       
+        return destinationFloor;
     }
 
 
