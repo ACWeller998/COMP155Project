@@ -4,6 +4,7 @@ public class HallButton {
   boolean upButton= false;
   boolean downButton=false;
   String direction= null;
+  int floorNum;
   
   
   
@@ -33,6 +34,12 @@ public class HallButton {
   }
   public void setDirection(String dirn){
     direction=dirn;
+  }
+  public int getFloorNum(){
+    return floorNum;
+  }
+  public int setFloorNum(int fNum){
+    floorNum=fNum;
   }
  
     
